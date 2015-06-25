@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ESB Messages</title>
+    <link rel="stylesheet" href="style/main.css" type="text/css">
+      <!--<link rel="stylesheet" href="style/screen.css" type="text/css">-->
+    <script src="vendor/couchapp/loader.js"></script>
+  </head>
+  <body>
+  <form method="get" action="http://127.0.0.1:5984/esb_audit/_design/esb_audit/index.html">
+      <table cellpadding="0px" cellspacing="0px">
+          <tr>
+              <td style="border-style:solid none solid solid;border-color:#4B7B9F;border-width:1px;">
+                  <input type="text" name="zoom_query" style="width:100px; border:0px solid; height:17px; padding:0px 3px; position:relative;">
+              </td>
+              <td style="border-style:solid;border-color:#4B7B9F;border-width:1px;">
+                  <input type="submit" value="" style="border-style: none; background: url('images/searchbutton3.gif') no-repeat; width: 24px; height: 20px;">
+              </td>
+          </tr>
+
+      </table>
+
+  </form>
+
+  <div id="account"></div>
+
+
+    <h1><a href="http://127.0.0.1:5984/esb_audit/_design/esb_audit/index.html"><img src ="images/tsclogo.gif" alt="logo" height="100" width="200"></a> <br />
+        ESB Messages </h1>
+
+
+    <div id="profile">
+    </div>
+    <div id="content"></div>
+
+
+    <div id="sidebar">
+      <p>View Shipping Details</p>
+      <p>Maybe one day this web app will work...</p>
+    </div>
+  </body>
+  <script src="/_utils/script/sha1.js"></script>
+  <script src="/_utils/script/json2.js"></script>
+  <script src="/_utils/script/jquery.js"></script>
+  <script src="/_utils/script/jquery.couch.js"></script>
+  <script src="vendor/couchapp/jquery.couchLogin.js"></script>
+  <script src="vendor/couchapp/jquery.couchProfile.js"></script>
+  <script src="vendor/couchapp/md5.js"></script>
+  <script src="vendor/couchapp/jquery.mustache.js"></script>
+  <script src="vendor/couchapp/jquery.evently.js"></script>
+
+ <!--templates used by app.js-->
+  <script id="new-message" type="text/x-mustache" charset="utf-8">
+      <div class="avatar">
+        {{#gravatar_url}}<img src="{{gravatar_url}}"/>{{/gravatar_url}}
+        <div class="name">
+          {{name}}
+        </div>
+      </div>
+      <!--<form id="create-message">-->
+        <!--<label>New message from {{nickname}}: <input type="text" name="message" size=60 value=""></label>-->
+      <!--</form>-->
+      <div id = "form">
+      <form>
+
+      <label>Key: <input type="text" name="key" size=20 value""></label>
+       </form>
+       </div>
+      <div style="clear:left;"></div>
+  </script>
+
+  <script id="shipping-details" type="text/x-mustache" charset="utf-8">
+        <h3>Shipping Details</h3>
+        <ul id="items">
+          {{#items}}
+            <li>
+
+
+              <p><strong>Proxy Stage:</strong></p>
+              <p>{{PS}}</p>
+              <p><strong>Proxy Name:</strong></p>
+              <p>{{PN}}</p>
+
+              <p><strong>Date:</strong></p>
+              <p>{{DT}}</p>
+
+
+
+
+
+
+              <div style="clear:left;"></div>
+            </li>
+          {{/items}}
+        </ul>
+        <p id = "demo"></p>
+        <script>
+            document.getElementById("demo").innerHTML = Date();
+        </script>
+
+  <script src="script/app.js"></script>
+
+</html>
