@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Generated CouchApp
 
 This is meant to be an example CouchApp and to ship with most of the CouchApp goodies.
@@ -31,3 +32,7 @@ Deprecated: *couchapp generate proto && cd proto*
 ## License
 
 Apache 2.0
+=======
+# esb_message_audit
+CouchApp to show ESB shipping details
+>>>>>>> 43ee8f81ccb3eb05a7bd6dd42821d2c199be33ba
