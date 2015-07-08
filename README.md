@@ -1,38 +1,27 @@
-<<<<<<< HEAD
-## Generated CouchApp
-
-This is meant to be an example CouchApp and to ship with most of the CouchApp goodies.
-
-Clone with git:
-
-    git clone git://github.com/couchapp/example.git
-    cd example
-
-Install with 
-    
-    couchapp push . http://localhost:5984/example
-
-or (if you have security turned on)
-
-    couchapp push . http://adminname:adminpass@localhost:5984/example
-  
-You can also create this app by running
-
-    couchapp generate example && cd example
-    couchapp push . http://localhost:5984/example
-
-Deprecated: *couchapp generate proto && cd proto*
-
-
-## Todo
-
-* factor CouchApp Commonjs to jquery.couch.require.js
-* use $.couch.app in app.js
+# esb_message_audit
+CouchApp to show ESB shipping details
 
 ## License
 
 Apache 2.0
 =======
-# esb_message_audit
-CouchApp to show ESB shipping details
->>>>>>> 43ee8f81ccb3eb05a7bd6dd42821d2c199be33ba
+
+
+
+Clone with git:
+
+    git clone git://github.com/couchapp/esb_audit.git
+    cd esb_audit
+
+Install with 
+    
+    couchapp push . http://localhost:5984/esb_audit
+
+or (if you have security turned on)
+
+    couchapp push . http://adminname:adminpass@localhost:5984/example
+  
+
+
+
+
