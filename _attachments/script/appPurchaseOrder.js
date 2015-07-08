@@ -1,6 +1,5 @@
 
 $(function() {
-
     function urlParam(name){
         var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
         if (results==null){
@@ -10,14 +9,13 @@ $(function() {
            return results[1] || 0;
         }
     }
-
     var path = unescape(document.location.pathname).split('/'),
         design = path[3],
         db = $.couch.db("esb_audit");
 
     function drawItems() {
         $("#esb_audit").empty();
-        _key = urlParam('order_id');
+        _key = urlParam('poNumber');
         object = {
                  key : Number(_key),
                  descending : "true",
@@ -33,8 +31,7 @@ $(function() {
                  }
              };
 
-        db.view(design + "/return_id/map.js", object);
-
+        db.view(design + "/purchaseOrderNumber", object);
     };
 
     drawItems();

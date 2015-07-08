@@ -1,7 +1,7 @@
 function(doc) {
 	var id;
-	if(doc.OrderId) {
-		id = doc.OrderId;
+	if(doc.PurchaseOrderNumber) {
+		id = doc.PurchaseOrderNumber;
 
 
 			emit(id,{
@@ -9,12 +9,9 @@ function(doc) {
 			PS: doc.ProxyStage,
 			DT: doc.auditDateTime
 
+
 			});
 
 	}
 };
-
-
-
-
 
