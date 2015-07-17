@@ -5,8 +5,7 @@ CouchApp to show ESB shipping details
 
 
 ![alt tag](/_attachments/images/Page2.png?raw=true)
-![alt tag](/_attachments/images/Page3.png?raw=true)
-![alt tag](/_attachments/images/Page1.png?raw=true)
+
 # License
 
 Apache 2.0
@@ -16,7 +15,7 @@ Apache 2.0
 
 Clone with git:
 
-    git clone git://github.com/couchapp/esb_audit.git
+    git clone git://github.com/cruzegoodin/esb_audit.git
     cd esb_audit
 
 Install with 
@@ -25,7 +24,7 @@ Install with
 
 or (if you have security turned on)
 
-    couchapp push . http://adminname:adminpass@localhost:5984/example
+    couchapp push . http://adminname:adminpass@localhost:5984/esb_audit
   
 
 
