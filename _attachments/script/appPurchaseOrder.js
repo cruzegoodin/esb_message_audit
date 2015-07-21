@@ -11,7 +11,7 @@ $(function() {
     }
     var path = unescape(document.location.pathname).split('/'),
         design = path[3],
-        db = $.couch.db("esb_audit");
+        db = $.couch.db("esb_message_audit");
 
     function drawItems() {
         $("#esb_audit").empty();
@@ -45,15 +45,15 @@ $(function() {
         }
     }
 
-    $.couchProfile.templates.profileReady = $("#enter-key").html();
-    $("#account").couchLogin({
-        loggedIn : function(r) {
-            $("#profile").couchProfile(r, {
-                profileReady : function(profile) {}
-            });
-        },
-        loggedOut : function() {
-            $("#profile").html('<p>Please log in to see your profile.</p>');
-        }
-    });
+//    $.couchProfile.templates.profileReady = $("#enter-key").html();
+//    $("#account").couchLogin({
+//        loggedIn : function(r) {
+//            $("#profile").couchProfile(r, {
+//                profileReady : function(profile) {}
+//            });
+//        },
+//        loggedOut : function() {
+//            $("#profile").html('<p>Please log in to see your profile.</p>');
+//        }
+//    });
  });

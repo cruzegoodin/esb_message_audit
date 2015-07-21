@@ -12,12 +12,12 @@
   </head>
   <body>
 
-  <div id="account"></div>
+  <!--<div id="account"></div>-->
 
    <h1><a href="http://127.0.0.1:5984/esb_audit/_design/esb_audit/index.html"><img src ="images/tsclogo.gif" alt="logo" height="100" width="200"></a> <br />
         ESB Messages </h1>
-    <div id="profile">
-    </div>
+    <!--<div id="profile">-->
+    <!--</div>-->
     <div id="content"></div>
     <div id="sidebar">
         <p><strong>Choose View:</strong></p>
@@ -41,31 +41,32 @@
   <script src="/_utils/script/json2.js"></script>
   <script src="/_utils/script/jquery.js"></script>
   <script src="/_utils/script/jquery.couch.js"></script>
-  <script src="vendor/couchapp/jquery.couchLogin.js"></script>
-  <script src="vendor/couchapp/jquery.couchProfile.js"></script>
+  <!--<script src="vendor/couchapp/jquery.couchLogin.js"></script>-->
+  <!--<script src="vendor/couchapp/jquery.couchProfile.js"></script>-->
   <script src="vendor/couchapp/md5.js"></script>
   <script src="vendor/couchapp/jquery.mustache.js"></script>
   <script src="vendor/couchapp/jquery.evently.js"></script>
 
  <!--templates used by app.js-->
-  <script id="enter-key" type="text/x-mustache" charset="utf-8">
-      <div class="avatar">
-        {{#gravatar_url}}<img src="{{gravatar_url}}"/>{{/gravatar_url}}
-        <div class="name">
-          {{name}}
-        </div>
-      </div>
+  <!--<script id="enter-key" type="text/x-mustache" charset="utf-8">-->
+      <!--<div class="avatar">-->
+        <!--{{#gravatar_url}}<img src="{{gravatar_url}}"/>{{/gravatar_url}}-->
+        <!--<div class="name">-->
+          <!--{{name}}-->
+        <!--</div>-->
+      <!--</div>-->
 
-         <form>
-            <label> Order ID: <input type="text" id="order_id" name="order_id" size=20 value=""></label>
-            <button input type="submit" value="submit" name="Submit"> Submit </button>
-        </form>
 
-      <div style="clear:left;"></div>
-  </script>
+
+      <!--<div style="clear:left;"></div>-->
+  <!--</script>-->
 
   <script id="shipping-details" type="text/x-mustache" charset="utf-8">
         <h3>Shipping Details</h3>
+                 <form>
+            <label> Order ID: <input type="text" id="order_id" name="order_id" size=20 value=""></label>
+            <button input type="submit" value="submit" name="Submit"> Submit </button>
+        </form>
         <ul id="items">
           {{#items}}
             <li>
