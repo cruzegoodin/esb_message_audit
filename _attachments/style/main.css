@@ -28,6 +28,10 @@ h1 {
   float:left;
 }
 
+#ddown{
+float:left;
+}
+
 #sidebar {
   border:4px solid #D5000C;
   padding:8px;
@@ -37,6 +41,7 @@ h1 {
 
 #sidebartext{
 float:right;
+padding: 4px;
 }
 
 #items li {
@@ -47,6 +52,7 @@ float:right;
 }
 
 form {
+  overflow:auto;
   padding:4px;
   margin:6px;
   background-color:#ddd;  

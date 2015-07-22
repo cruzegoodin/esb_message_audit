@@ -1,40 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ESB Messages</title>
+    <title>ESB Audit Messages</title>
     <link rel="stylesheet" href="style/main.css" type="text/css">
       <!--<link rel="stylesheet" href="style/screen.css" type="text/css">-->
     <script src="vendor/couchapp/loader.js"></script>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="style/bootstrap.css">
+      <script src="script/jquery.js"></script>
+      <script src="script/bootstrap.js"></script>
   </head>
   <body>
 
   <!--<div id="account"></div>-->
 
-   <h1><a href="http://127.0.0.1:5984/esb_audit/_design/esb_audit/index.html"><img src ="images/tsclogo.gif" alt="logo" height="100" width="200"></a> <br />
-        ESB Messages </h1>
+   <h1><a href="http://t1raesb101.ssc.tsc:5984/esb_message_audit/_design/esb_audit/index.html"><img src ="images/tsclogo.gif" alt="logo" height="100" width="200"></a> <br />
+        ESB Audit Messages </h1>
     <!--<div id="profile">-->
     <!--</div>-->
     <div id="content"></div>
     <div id="sidebar">
-        <p><strong>Choose View:</strong></p>
+        <p><strong>Instructions:</strong> ESB Audit is an easily accessible GUI that allows users to quickly query CouchDB for Shipping Details
+            with a specific key.</p> <p>Click dropdown list to choose between searching Order Id and Purchase Order Number.</p>
+
+
         <div id="sidebartext">
-            <p>Enter Order Id to return info</p>
+
         </div>
-        <div class="container">
-            <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Views
-                    <span class="caret"></span></button>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="purchaseOrderNumber.html">Purchase Order Number</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="index.html">Order Id</a></li>
-                    <li role="presentation" class="divider"></li>
-                </ul>
-            </div>
-        </div>
+
     </div>
   </body>
   <script src="/_utils/script/sha1.js"></script>
@@ -63,8 +56,24 @@
 
   <script id="shipping-details" type="text/x-mustache" charset="utf-8">
         <h3>Shipping Details</h3>
+            <div id="ddown">
+        <!--<div class="container">-->
+
+            <div class="dropdown">
+                <!--<p><strong>Choose View:</strong></p>-->
+                <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Views
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="index.html">Order Id</a></li>
+                     <li role="presentation"><a role="menuitem" tabindex="-1" href="purchaseOrderNumber.html">Purchase Order Number</a></li>
+                    <!--<li role="presentation" class="divider"></li>-->
+                </ul>
+            </div>
+        <!--</div>-->
+    </div>
+
                  <form>
-            <label> Order ID: <input type="text" id="order_id" name="order_id" size=20 value=""></label>
+            <label> Order ID: <input type="text" id="order_id" name="order_id" size=20 value="" autocomplete="off"s></label>
             <button input type="submit" value="submit" name="Submit"> Submit </button>
         </form>
         <ul id="items">
@@ -81,10 +90,14 @@
             </li>
           {{/items}}
         </ul>
-        <p id = "demo"></p>
-        <script>
-            document.getElementById("demo").innerHTML = Date();
+
+        <!--<p id = "demo"></p>-->
+        <!--<script>-->
+            <!--document.getElementById("demo").innerHTML = Date();-->
         </script>
+  <br />
+  <br />
+
 
   <script src="script/app.js"></script>
 
